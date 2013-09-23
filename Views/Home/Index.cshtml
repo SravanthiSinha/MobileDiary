@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Page </title>
+</head>
+<body>
+    <div data-role="page" id="MobileDiary">
+        <!--  Header -->
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h2>
+                Mobile Diary
+            </h2>
+        </div>
+        <!--closeing Header  -->
+        <div data-role="content" class="page1-content">
+            <center>
+                <img src="../../Images/Diary.png" />
+                <br />
+                <a href="#Registration" id="sign-up" data-role="button" data-mini="true" data-inline="true"
+                    data-theme="a">Sign Up for free</a> <a href="#LoginForm" id="sign-in" data-role="button"
+                        data-mini="true" data-inline="true" data-theme="a">Sign-In</a>
+            </center>
+        </div>
+        <!-- Content Ends -->
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+    </div>
+    <!-- footer ends -->
+    <!-- Page ends  -->
+    <!--second page -->
+    <!-- footer ends -->
+    <div data-role="page" id="Registration">
+        <div data-role="header" data-theme="a">
+            <h2>
+                Mobile Diary
+            </h2>
+            <a href="#MobileDiary" data-role="button">Back</a>
+        </div>
+        <div data-role="content">
+            <p style="text-align: center">
+                Registraton</p>
+            <br />
+            <div>
+                <center>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="Name">
+                                    Name
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="txtName" id="txtName" value="" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Email">
+                                    Email
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="txtEmail" id="txtEmail" value="" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Password">
+                                    Password
+                                </label>
+                            </td>
+                            <td>
+                                <input type="password" id="txtPassword" name="txtPassword" value="" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="RePassword">
+                                    Retype Password
+                                </label>
+                            </td>
+                            <td>
+                                <input type="password" id="txtRePassword" name="txtRePassword" value="" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Mobile">
+                                    MobileNo
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" id="txtMobile" value="" name="txtMobile" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <center>
+                                    <input id="btnRegister" type="button" data-inline="true" value="Register" style="text-align: center" />
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+    </div>
+    <!-- footer ends -->
+    <!--End of Registration page-->
+    <!--Start of Profile Setings-->
+    <div id="ProfileSettings" data-role="page">
+        <div data-role="navbar" data-iconpos="left" class="ui-navbar ui-mini" role="navigation">
+            <ul class="ui-grid-b">
+                <li class="ui-block-c"><a href="#Home" data-icon="grid" data-corners="false" data-shadow="false"
+                    data-iconshadow="true" data-wrapperels="span" data-iconpos="left" data-theme="a"
+                    data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-left ui-btn-up-a">Home</a>
+                </li>
+                <li class="ui-block-c"><a href="#" onclick="checkJournal();" data-icon="star" class=" ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left"
+                    data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span"
+                    data-iconpos="left" data-theme="a" data-inline="true">Journal</a> </li>
+                <li class="ui-block-c"><a href="#Note" data-icon="bar" data-corners="false" data-shadow="false"
+                    data-iconshadow="true" data-wrapperels="span" data-iconpos="left" data-theme="a"
+                    data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">New
+                    Note</a></li>
+                <li class="ui-block-c"><a href="#LookUp" data-icon="search" data-corners="false"
+                    data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                    data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                    LookUp</a></li>
+                <li class="ui-block-c"><a href="#" onclick="logOut();" data-icon="minus" data-corners="false"
+                    data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                    data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                    Logout</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <div>
+                <center>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="Email">
+                                    Email
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="name" id="PS_email" value="" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Email">
+                                    Current Password
+                                </label>
+                            </td>
+                            <td>
+                                <input type="password" name="name" id="PS_curPswd" value="" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div data-role="fieldcontain">
+                                    <label for="Email">
+                                        New Password
+                                    </label>
+                            </td>
+                            <td>
+                                <input type="password" name="name" id="PS_newPswd" value="" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Email">
+                                    Retype NewPassword
+                                </label>
+                            </td>
+                            <td>
+                                <input type="password" name="name" id="PS_rePswd" value="" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Email">
+                                    Mobile
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="name" id="PS_mobile" value="" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <center>
+                                    <input id="btnSave" type="button" value="Save" style="text-align: center" data-inline="true" />
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+        <!-- footer ends -->
+    </div>
+    <!--End of Profile Setings-->
+    <div data-role="page" id="Journal">
+        <!--HeadeStart-->
+        <div data-role="header" data-theme="a" align="center" data-position="fixed">
+            <div data-role="navbar" data-iconpos="left" class="ui-navbar ui-mini" role="navigation">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a"><a href="#Home" data-icon="grid" data-corners="false" data-shadow="false"
+                        data-iconshadow="true" data-wrapperels="span" data-iconpos="left" data-theme="a"
+                        data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-left ui-btn-up-a">Home</a>
+                    </li>
+                    <li class="ui-block-c"><a href="#Note" data-icon="bar" data-corners="false" data-shadow="false"
+                        data-iconshadow="true" data-wrapperels="span" data-iconpos="left" data-theme="a"
+                        data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">New
+                        Note</a></li>
+                    <li class="ui-block-c"><a href="#LookUp" data-icon="search" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        LookUp</a></li>
+                    <li class="ui-block-c"><a href="#ProfileSettings" data-icon="gear" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        Settings</a></li>
+                    <li class="ui-block-c"><a href="#" onclick="logOut();" data-icon="minus" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--HeaderEnds-->
+        <div data-role="content">
+            </br>
+            <div>
+                <center>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="Journal">
+                                    Journal Name
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="name" id="txtJournal" data-mini="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <center>
+                                    <input id="btnSubmit" type="button" value="Submit" data-inline="true" align="middle" />
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+        <!-- footer ends -->
+        <!-- Panel code -->
+        <!-- Panel dies  -->
+    </div>
+    <!--end of journal -->
+    <div data-role="page" id="Home">
+        <div data-role="header" data-theme="a" align="center" data-position="fixed">
+            <div data-role="navbar" data-iconpos="left" class="ui-navbar ui-mini" role="navigation">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-b"><a href="#" onclick="checkJournal();" data-icon="star" class=" ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left"
+                        data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span"
+                        data-iconpos="left" data-theme="a" data-inline="true">Journal</a> </li>
+                    <li class="ui-block-c"><a href="#Note" data-icon="bar" data-corners="false" data-shadow="false"
+                        data-iconshadow="true" data-wrapperels="span" data-iconpos="left" data-theme="a"
+                        data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">New
+                        Note</a></li>
+                    <li class="ui-block-c"><a href="#LookUp" data-icon="search" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        LookUp</a></li>
+                    <li class="ui-block-c"><a href="#ProfileSettings" data-icon="gear" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        Settings</a></li>
+                    <li class="ui-block-c"><a href="#" onclick="logOut();" data-icon="minus" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="page1-content">
+            <h1>
+                List Of Current Month Journals</h1>
+            <br />
+            <br />
+            <ul id="ulJournal" data-role="listview">
+            </ul>
+            <table>
+            </table>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+    </div>
+    <!-- footer ends -->
+    <!-- /page -->
+    <!-- -------------------------------------->
+    <div data-role="page" id="JournalDetailView" data-title="JournalDetailView Page">
+        <div data-role="header" data-theme="a" align="center" data-position="fixed">
+           
+            <h1>
+                Notes</h1>
+            <a href="#Home" data-rel="back" data-icon="arrow-l" data-iconpos="notext">Back</a>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="page1-content">
+            <table>
+                <tbody>
+                </tbody>
+            </table>
+            <ul id="ulJournalView" class="touch" data-role="listview" data-icon="false" data-split-icon="delete"
+                data-split-theme="d">
+            </ul>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM
+            </h4>
+        </div>
+    </div>
+    <!-- footer ends -->
+    </div>
+    <!-- -------------------------------------->
+    <!-- -------------------------------------->
+    <div data-role="page" id="DetailsView" data-title="DetailsViewPage">
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>
+                Notes</h1>
+            <a href="#JournalDetailView" data-rel="back" data-icon="arrow-l" data-iconpos="notext">
+                Back</a>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="page1-content">
+            <table>
+                <tbbody1>
+                    </tbbody1>
+            </table>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+    </div>
+    <!-- -------------------------------------->
+    <!--Back2ABCPAGE-->
+    <div data-role="page" id="entrypage">
+        <div data-role="header" data-theme="a" align="center" data-position="fixed">
+            <a href="#Home">Back</a>
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="page1-content">
+            <table>
+                <tbbody>
+                    </tbbody>
+            </table>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+    </div>
+    <!-- footer ends -->
+    <!-- /Footer -->
+    </div>
+    <!--End of Back Page-->
+    <!--Display nOTE Page-->
+    <div data-role="page" id="Note">
+        <div data-role="header" data-theme="a" align="center" data-position="fixed">
+            <div data-role="navbar" data-iconpos="left" class="ui-navbar ui-mini" role="navigation">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a"><a href="#Home" data-icon="grid" data-corners="false" data-shadow="false"
+                        data-iconshadow="true" data-wrapperels="span" data-iconpos="left" data-theme="a"
+                        data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-left ui-btn-up-a">Home</a>
+                    </li>
+                    <li class="ui-block-b"><a href="#" onclick="checkJournal();" data-icon="star" class=" ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left"
+                        data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span"
+                        data-iconpos="left" data-theme="a" data-inline="true">Journal</a> </li>
+                    <li class="ui-block-c"><a href="#LookUp" data-icon="search" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        LookUp</a></li>
+                    <li class="ui-block-c"><a href="#ProfileSettings" data-icon="gear" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        Settings</a></li>
+                    <li class="ui-block-c"><a href="#" onclick="logOut();" data-icon="minus" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /header -->
+        <div data-role="fieldcontain">
+            Choose Journal:<select id="userjournals" data-inline="true" data-native-menu="false"></select>
+            <div id="editor">
+                <!-- BEGIN DO_NOT_EDIT -->
+            </div>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+    </div>
+    <div data-role="page" id="LookUp">
+        <div data-role="header" data-theme="a" align="center" data-position="fixed">
+            <div data-role="navbar" data-iconpos="left" class="ui-navbar ui-mini" role="navigation">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a"><a href="#Home" data-icon="grid" data-corners="false" data-shadow="false"
+                        data-iconshadow="true" data-wrapperels="span" data-iconpos="left" data-theme="a"
+                        data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-left ui-btn-up-a">Home</a>
+                    </li>
+                    <li class="ui-block-b"><a href="#" onclick="checkJournal();" data-icon="star" class=" ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left"
+                        data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span"
+                        data-iconpos="left" data-theme="a" data-inline="true">Journal</a> </li>
+                    <li class="ui-block-c"><a href="#Note" data-icon="bar" data-corners="false" data-shadow="false"
+                        data-iconshadow="true" data-wrapperels="span" data-iconpos="left" data-theme="a"
+                        data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">New
+                        Note</a></li>
+                    <li class="ui-block-c"><a href="#ProfileSettings" data-icon="gear" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        Settings</a></li>
+                    <li class="ui-block-c"><a href="#" onclick="logOut();" data-icon="minus" data-corners="false"
+                        data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="left"
+                        data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left">
+                        Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                <center>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="date" class="ui-input-text">
+                                    Search Journal:</label>
+                            </td>
+                            <td>
+                                <input type="date" name="date" id="date" value="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <center>
+                                    <a id="btnSearch" href="#" data-rel="close" data-role="button" data-theme="b" data-mini="true"
+                                        onclick="getEntries();" data-inline="true">Search</a>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+            <div data-role="fieldcontain">
+                <center>
+                    <ul id="ulEntryView" class="touch" data-role="listview" data-icon="false" data-split-icon="delete"
+                        data-split-theme="d">
+                    </ul>
+                </center>
+            </div>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+    </div>
+    <!-- footer ends -->
+    <div data-role="page" id="LoginForm">
+        <div data-role="header" data-theme="a">
+            <h2>
+                Mobile Diary
+            </h2>
+            <a href="#MobileDiary" class="ui-btn-left">Back</a>
+        </div>
+        <div data-role="content" class="page1-content">
+            <h2 style="text-align: center">
+                <b>Login</b></h2>
+            <br />
+            <br />
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name">
+                                Username:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+                        </td>
+                        <tr>
+                            <td>
+                                <label for="password">
+                                    Password:</label>
+                            </td>
+                            <td>
+                                <input type="password" name="password" id="password" value="" data-clear-btn="true"
+                                    autocomplete="off" data-mini="true">
+                            </td>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <div class="ui-block-b">
+                                        <a id="btnSignIn" href="#" data-rel="close" data-role="button" data-theme="b" data-mini="true">
+                                            Sign IN</a></div>
+                                </td>
+                            </tr>
+                </table>
+            </center>
+        </div>
+        <!--footer starts  -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+    </div>
+    <!-- footer ends -->
+    <!-- /page -->
+    <div data-role="page" id="ErrorPage">
+        <div data-role="header" data-theme="a">
+            <h2>
+                Mobile Diary
+            </h2>
+            <a href="#MobileDiary" class="ui-btn-left">Back</a>
+        </div>
+        <div data-role="fieldcontain">
+            <center>
+               Servie Not Found</center>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h4>
+                CopyRights@INRHYTHM</h4>
+        </div>
+    </div>
+</body>
+</html>

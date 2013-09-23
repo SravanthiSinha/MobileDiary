@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+     
+ <!--   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+   
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>-->
+  
+@*    @Styles.Render("~/Content/themes/base/css", "~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/jqueryMobileCSS")
+    @Scripts.Render("~/bundles/jquery")*@
+
+
+
+<!--	 jQuery and UI-->
+   
+  
+
+    <script src="../../Resources/script/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <link href="../../Resources/script/jquery.mobile-1.2.0.css" rel="stylesheet" type="text/css" />
+    <script src="../../Resources/script/jquery.mobile-1.2.0.js" type="text/javascript"></script>
+    <script src="../../Scripts/MyScripts/JHome.js" type="text/javascript"></script>
+    <link href="../../Resources/script/jqm-docs.css" rel="stylesheet" type="text/css" />
+    <script src="../../Resources/script/jqm-docs.js" type="text/javascript"></script>
+
+	<!-- CSS for widgets -->
+    <link href="../../Resources/ellib/css/elcolorpicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/ellib/css/elcommon.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/ellib/css/eldialogform.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/ellib/css/elpaddinginput.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/ellib/css/elreset.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/ellib/css/elselect.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/elrte/css/elrte-inner.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/elrte/css/elrte.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/elrte/css/inner-example.css" rel="stylesheet" type="text/css" />
+	<!-- Common JS and widgets -->
+    <script src="../../Resources/ellib/js/eldialogform.js" type="text/javascript"></script>
+    <script src="../../Resources/ellib/js/eli18n.js" type="text/javascript"></script>
+    <script src="../../Resources/ellib/js/jquery.elborderselect.js" type="text/javascript"></script>
+    <script src="../../Resources/ellib/js/jquery.elcolorpicker.js" type="text/javascript"></script>
+    <script src="../../Resources/ellib/js/jquery.elpaddinginput.js" type="text/javascript"></script>
+    <script src="../../Resources/ellib/js/jquery.elselect.js" type="text/javascript"></script>
+	<!-- elRTE core -->
+	<script src="../../Resources/elrte/js/elRTE.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/elRTE.options.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/elRTE.utils.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/elRTE.DOM.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/elRTE.selection.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/elRTE.w3cRange.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/elRTE.ui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/elRTE.history.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/elRTE.filter.js" type="text/javascript" charset="utf-8"></script>
+
+	<!-- elRTE languages -->
+	<script src="../../Resources/elrte/js/i18n/elrte.ar.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.ca.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.cs.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.da.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.de.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.en.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.es.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.fa.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.fr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.hr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.hu.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.it.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.jp.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.ko.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.lv.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.nl.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.no.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.pl.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.pt_BR.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.ru.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.th.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.tr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.uk.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.vi.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.zh_CN.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/i18n/elrte.zh_TW.js" type="text/javascript" charset="utf-8"></script>
+
+	<!-- elRTE buttons -->
+     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="../../Resources/elrte/js/ui/anchor.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/blockquote.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/copy.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/css.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/div.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/docstructure.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/elfinder.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/fontname.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/fontsize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/forecolor.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/formatblock.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/fullscreen.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/horizontalrule.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/image.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/flash.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/indent.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/justifyleft.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/link.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/nbsp.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/outdent.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/pasteformattext.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/pastetext.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/save.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/stopfloat.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/table.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/tablerm.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/tbcellprops.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/tbcellsmerge.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/tbcellsplit.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/tbcollbefore.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/tbcolrm.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/tbrowbefore.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/tbrowrm.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/unlink.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/undo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/direction.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/smiley.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/pagebreak.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Resources/elrte/js/ui/about.js" type="text/javascript" charset="utf-8"></script>
+
+	<!-- elFinder 
+	<link rel="stylesheet" href="../../elfinder/css/elfinder.css" type="text/css" media="screen" charset="utf-8">
+	<script src="../../elfinder/js/elfinder.full.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../elfinder/js/i18n/elfinder.ru.js" type="text/javascript" charset="utf-8"></script>-->
+
+
+ 
+
+
+	<script type="text/javascript" charset="utf-8">
+	    jQuery().ready(function () {
+	        // Disable filtering chains
+	        // elRTE.prototype.filter.prototype.chains = {	}
+
+	        /* elRTE 'custom' toolbar */
+	        elRTE.prototype.options.panels.custom = [
+				'bold', 'italic', 'underline', 'forecolor',
+				'fontsize', 'formatblock', 'insertorderedlist', 'insertunorderedlist', 'docstructure'
+			];
+	        elRTE.prototype.options.toolbars.custom = ['custom', 'eol', 'undoredo', 'alignment', 'eol', 'links', 'images'];
+
+	        var opts = {
+	            // doctype  : '<!DOCTYPE html PUBLIC  "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">',
+	            cssClass: 'el-rte',
+	            //lang     : 'en',
+	            height: 350,
+
+	            toolbar: 'maxi', // custom
+	            cssfiles: ['../../Resources/elrte/css/elrte-inner.css', '../../Resources/elrte/css/inner-example.css'],
+
+	            // example of user replacement
+	            // restricts edit of blocks like <!-- BEGIN MY_BLOCK -->anything<!-- END MY_BLOCK -->
+	            replace: [function (html) {
+	                var self = this;
+	                return html.replace(/(<!--\s*BEGIN\s*([^>]+)\s*-->([\s\S]*?)<!--\s*END\s*(\2)\s*-->)/gi, function (t, a, b, c, d) {
+
+	                    if (b == d) {
+	                        //self.rte.log([b, d]);
+	                        var id = 'MYTAG' + Math.random().toString().substring(2);
+	                        self.scripts[id] = t;
+	                        return '<img id="' + id + '" src="' + self.url + 'pixel.gif" class="elrte-protected elrte-MYTAG">';
+	                    }
+	                    return html;
+	                });
+	            } ],
+	            restore: [function (html) {
+	                var self = this;
+	                return html.replace(this.serviceClassRegExp, function (t, n, a) {
+	                    a = self.parseAttrs(a);
+	                    if (a["class"]['elrte-MYTAG']) {
+	                        return self.scripts[a.id] + "\n" || '';
+	                    }
+	                    return t;
+	                });
+	            } ]
+	        };
+
+	        // create elRTE
+	        var rte = $('#editor').elrte(opts);
+
+	        // elRTE in dialog example
+	        $('#dialog').click(function () { // open dialog on click
+	            var dialog = $('<div/>').dialog({
+	                title: 'Editor in dialog',
+	                width: 600
+	            });
+	            // create element for elRTE
+	            var rteInDialog = $('<div>Content for editor in dialog</div>');
+	            // put element inside dialog
+	            dialog.append(rteInDialog);
+	            // create elRTE on element
+	            rteInDialog.elrte(opts);
+	        });
+	        $('#getContent').click(function () {
+	            alert($('#editor').elrte('val'));
+	        });
+	        $('#setContent').click(function () {
+	            $('#editor').elrte('val', 'This is new <b>content</b> for editor');
+	        });
+	        $('#destroy').click(function () {
+	            $('#editor').elrte('destroy');
+	        });
+
+	    });
+	</script>
+	
+	<style type="text/css" media="screen">
+		body { padding: 0 20px; }
+		.button { display:inline-block; border:1px solid #ccc; background:#eee; padding:5px; margin:10px; }
+	</style>
+   
+</head>
+<body>
+    @RenderBody()
+
+@*    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)*@
+</body>
+</html>
